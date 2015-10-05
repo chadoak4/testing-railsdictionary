@@ -1,0 +1,150 @@
+body {
+  background-image:image-url('space.jpg');
+  background-size: 100%;
+  color: #fffb94;
+  text-align: center;
+  font-family: lato;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+
+
+}
+
+header #text{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    margin: 0px;
+}
+header #text {
+  color: #ffffff;
+  letter-spacing: .1em;
+  text-shadow:
+    0 -1px 0 #fff,
+    0 1px 0 #2e2e2e,
+    0 2px 0 #2c2c2c,
+    0 3px 0 #2a2a2a,
+    0 4px 0 #282828,
+    0 5px 0 #262626,
+    0 6px 0 #242424,
+    0 7px 0 #222,
+    0 8px 0 #202020,
+    0 9px 0 #1e1e1e,
+    0 10px 0 #1c1c1c,
+    0 11px 0 #1a1a1a,
+    0 12px 0 #181818,
+    0 13px 0 #161616,
+    0 14px 0 #141414,
+    0 15px 0 #121212,
+    0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+header{
+  background-image:image-url('catground.jpg');
+  background-size: 100% 98px;
+  text-align: left;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #ffffff;
+}
+
+h1 {
+  color: #fffb94;
+  font-family: lato;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 5px;
+}
+
+
+table{
+  margin-top: 30px;
+  background-color: #000000;
+  opacity: 0.7;
+  margin: 0px auto;
+  margin-top: 10px;
+  padding: 50px;
+
+}
+th{
+  padding-bottom: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+tr{
+  text-align: left;
+}
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #ffffff;
+
+  &:visited {
+    color: #ffffff;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}

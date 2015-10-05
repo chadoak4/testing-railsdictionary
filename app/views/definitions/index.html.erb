@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<link href='https://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
+
+<h1>Out Of This World Jargon</h1>
+<%= link_to 'New Alien Language? Add it here!', new_definition_path %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Meaning</th>
+      <th>Word Type</th>
+      <th>Word Used in a Sentence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @definitions.each do |definition| %>
+      <tr>
+        <td><%= definition.word %></td>
+        <td><%= definition.meaning %></td>
+        <td><%= definition.word_type %></td>
+        <td><%= definition.sentence %></td>
+        <td><%= link_to 'Show', definition %></td>
+        <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+        <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

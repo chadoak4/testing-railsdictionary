@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Railsdictionary</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1 id='text'>Space Cationary</h1>
+    <%= render 'navbar' %>
+    <!-- <div id="search">
+      <%= form_tag(search_definitions_path,method: "get") do %>
+          <%= text_field_tag :search %>
+          <%= submit_tag "Search" %>
+      <% end %>
+    </div> -->
+  </header>
+
+<%= yield %>
+
+</body>
+</html>
