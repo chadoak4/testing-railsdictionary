@@ -4436,3 +4436,345 @@ Processing by DefinitionsController#index as HTML
   Rendered definitions/index.html.erb within layouts/application (1.8ms)
   Rendered definitions/_navbar.html.erb (0.0ms)
 Completed 200 OK in 168ms (Views: 167.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 15:19:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.4ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (11.0ms)
+  Rendered definitions/_navbar.html.erb (0.4ms)
+Completed 200 OK in 317ms (Views: 305.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/definitions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/scaffolds.self-31ab7fd86a93ed84ff8898b10dbf726b42bad8c45aa5254b6d0246166623691c.css?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/application.self-a512250186ec712e9c5bc6539da044782ad191c3082f04fb73e34f714b9808aa.css?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/definitions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/catground-a5a40647500b88f40c4f6e29af953835cc5b2b69a4a49a012a7ad7f122064794.jpg" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/assets/space-1994a955588f989d3cd2f97eefc1a2712bc18771ca5b9e723439d4b2133ec51e.jpg" for ::1 at 2015-10-05 15:19:48 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 15:20:16 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.9ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 86.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 16:17:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.4ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (14.9ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 429ms (Views: 419.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/scaffolds.self-5212118f8fe6e2031f608e891c9504046f55e209e7506d7f1b86cef997f8284a.css?body=1" for ::1 at 2015-10-05 16:17:28 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:19:17 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.8ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1453ms (Views: 1451.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-78e13ad1139edafbe4fb6eb556a1bd5937d052ff55e913c6156e04bdebde58bc.css?body=1" for ::1 at 2015-10-05 16:19:19 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:24:10 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.8ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1605ms (Views: 1603.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-c357bafedeb0e9b5b1a0d832800094a519ccacdfcd101eb732e855ce25d07842.css?body=1" for ::1 at 2015-10-05 16:24:12 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:26:09 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.3ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1437ms (Views: 1436.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-78341bc98a630b32aff8b44c0316f522fa624ffa1308274a12cc3671d856734d.css?body=1" for ::1 at 2015-10-05 16:26:11 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:29:25 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.7ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1448ms (Views: 1447.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-800c06b8fb5f0862e9cd38190bfb709ec5ab9c4a1c98c386eb4625bf6352bbd6.css?body=1" for ::1 at 2015-10-05 16:29:27 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:30:10 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.7ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1466ms (Views: 1465.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e43c1216b52bc0c4203eefa1f616fdeba46f96dbc87de66be8b4ae1affc95c57.css?body=1" for ::1 at 2015-10-05 16:30:11 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:30:15 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.9ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 16:30:38 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.5ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1542ms (Views: 1541.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-455d9840345381c81239686727125e7a1579cb9787b4467f06e99427b3133b12.css?body=1" for ::1 at 2015-10-05 16:30:40 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:30:52 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.2ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1398ms (Views: 1397.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-a75469f3bc8a6787f540f8eaf9eac3e6a92553fd75df7440259bca051cfb1fcb.css?body=1" for ::1 at 2015-10-05 16:30:53 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:31:07 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.4ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1393ms (Views: 1391.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-503cb14f94ee9197d9b319baad430ee2d37959016f6e2e59e9e10e4894e32331.css?body=1" for ::1 at 2015-10-05 16:31:08 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:38:28 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Invalid CSS after ".navbar-default  {": expected "}", was "{min-height:28p..."):
+    2: <html>
+    3: <head>
+    4:   <title>Railsdictionary</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:21
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2939903990697024099_70135520949880'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 16:38:42 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.5ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1617ms (Views: 1616.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-777f6ea6fce908e3d0354a1382801c131f62b022e80f11be98e1c8948904afbb.css?body=1" for ::1 at 2015-10-05 16:38:44 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:38:59 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.8ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1376ms (Views: 1374.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-b65da0f04833814a670839480c38efb422210e2c27595e065ee7ff970dd5d452.css?body=1" for ::1 at 2015-10-05 16:39:00 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 16:39:21 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.4ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1280ms (Views: 1279.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 19:11:56 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (1.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 1692ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "}"):
+    2: <html>
+    3: <head>
+    4:   <title>Railsdictionary</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scaffolds.scss:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2939903990697024099_70135520949880'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 19:12:14 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.4ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.8ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1413ms (Views: 1411.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-b49c7ddc93eea78abf423d1cf28d6ca3503728b3df57d39f55522878853719b9.css?body=1" for ::1 at 2015-10-05 19:12:15 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:13:52 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.6ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.9ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 1544ms (Views: 1542.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.self-3039d6d15fdc729ce39fdde9b8b8620b6e8736161b053c28c34f16a3791d4fde.css?body=1" for ::1 at 2015-10-05 19:13:54 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:14:23 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.0ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1348ms (Views: 1347.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-c5ac159f54bf3d3cc52e0c03ecc2f9118b5dd2706f0b4ed43f47ca36883e097c.css?body=1" for ::1 at 2015-10-05 19:14:24 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:14:30 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.7ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 19:14:48 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.4ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1446ms (Views: 1444.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-83a383389f8a6e2e3e17607e080d902fb3069fd715b84fc912fe5665e9149c6b.css?body=1" for ::1 at 2015-10-05 19:14:50 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:15:03 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.8ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1313ms (Views: 1311.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-978e0c3f36ce084a9efc4c90da85d9a7dfedcb728dd0eff3440a796a17487173.css?body=1" for ::1 at 2015-10-05 19:15:04 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:15:23 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.3ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1360ms (Views: 1359.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-2214158fce31d917d9233bce5cecaa4428a7e415e2f847799a4a944569b9662f.css?body=1" for ::1 at 2015-10-05 19:15:25 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 19:15:36 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.5ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.4ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 1373ms (Views: 1371.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.self-3794f4c983143b36a55fefa3f1491989fc13338f4c346575ae632bd7a502d40e.css?body=1" for ::1 at 2015-10-05 19:15:38 -0400
+
+
+Started GET "/" for ::1 at 2015-10-05 20:06:35 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.4ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.4ms)

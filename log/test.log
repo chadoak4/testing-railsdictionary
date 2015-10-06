@@ -1,0 +1,886 @@
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "definitions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "meaning" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "word_type" varchar, "sentence" varchar) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151001052443')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150929175142')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151001033021')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-05 19:49:46', '2015-10-05 19:49:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-05 19:49:46', '2015-10-05 19:49:46', 298486374)[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-05 19:49:46.713275"], ["updated_at", "2015-10-05 19:49:46.713275"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (3.0ms)
+  Rendered definitions/_navbar.html.erb (0.4ms)
+Completed 200 OK in 4664ms (Views: 4663.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (17.1ms)
+  Rendered definitions/edit.html.erb within layouts/application (19.2ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (1.8ms)
+  Rendered definitions/new.html.erb within layouts/application (2.4ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.6ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title_to_be_valid
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 00:42:14', '2015-10-06 00:42:14', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 00:42:14', '2015-10-06 00:42:14', 298486374)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (21.6ms)
+  Rendered definitions/edit.html.erb within layouts/application (27.1ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 3527ms (Views: 3524.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (2.0ms)
+  Rendered definitions/new.html.erb within layouts/application (2.6ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 00:42:18.241237"], ["updated_at", "2015-10-06 00:42:18.241237"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.8ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 02:01:25', '2015-10-06 02:01:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 02:01:25', '2015-10-06 02:01:25', 298486374)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (11.4ms)
+  Rendered definitions/edit.html.erb within layouts/application (16.7ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 166ms (Views: 163.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (1.5ms)
+  Rendered definitions/new.html.erb within layouts/application (2.0ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.7ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.5ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 02:01:25.571408"], ["updated_at", "2015-10-06 02:01:25.571408"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 02:06:16', '2015-10-06 02:06:16', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 02:06:16', '2015-10-06 02:06:16', 298486374)[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (18.2ms)
+  Rendered definitions/edit.html.erb within layouts/application (25.1ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.4ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (1.6ms)
+  Rendered definitions/new.html.erb within layouts/application (2.1ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 02:06:16.455635"], ["updated_at", "2015-10-06 02:06:16.455635"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.6ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:52:01', '2015-10-06 03:52:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:52:01', '2015-10-06 03:52:01', 298486374)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------
+DefinitionTest: test_Words_whose_length_is_16_characters_or_more_should_be_considered_fancy
+-------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (8.5ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.6ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (13.0ms)
+  Rendered definitions/new.html.erb within layouts/application (14.3ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (1.7ms)
+  Rendered definitions/edit.html.erb within layouts/application (2.3ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 03:52:02.046299"], ["updated_at", "2015-10-06 03:52:02.046299"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:54:03', '2015-10-06 03:54:03', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:54:03', '2015-10-06 03:54:03', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------
+DefinitionTest: test_Words_whose_length_is_16_characters_or_more_should_be_considered_fancy
+-------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (9.6ms)
+  Rendered definitions/new.html.erb within layouts/application (18.7ms)
+  Rendered definitions/_navbar.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (2.2ms)
+  Rendered definitions/edit.html.erb within layouts/application (3.1ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.6ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.3ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>nil}, "id"=>"980190962"}
+  [1m[35mDefinition Load (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered definitions/_form.html.erb (1.9ms)
+  Rendered definitions/edit.html.erb within layouts/application (2.1ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "definitions" WHERE "definitions"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>nil}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered definitions/_form.html.erb (1.8ms)
+  Rendered definitions/new.html.erb within layouts/application (2.0ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:55:13', '2015-10-06 03:55:13', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 03:55:13', '2015-10-06 03:55:13', 298486374)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mDefinition Load (0.3ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.6ms)
+  Rendered definitions/_navbar.html.erb (0.6ms)
+Completed 200 OK in 140ms (Views: 139.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (16.4ms)
+  Rendered definitions/new.html.erb within layouts/application (18.2ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 03:55:13.442152"], ["updated_at", "2015-10-06 03:55:13.442152"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (0.7ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "definitions" WHERE "definitions"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mDefinition Load (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------
+DefinitionTest: test_Words_whose_length_is_16_characters_or_more_should_be_considered_fancy
+-------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "definitions"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 12:51:32', '2015-10-06 12:51:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-10-06 12:51:32', '2015-10-06 12:51:32', 298486374)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------
+DefinitionTest: test_Words_whose_length_is_16_characters_or_more_should_be_considered_fancy
+-------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+DefinitionTest: test_books_must_have_a_title/meaning_to_be_valid
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+DefinitionTest: test_definitions_without_a_word/meaning_are_invalid
+-------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+DefinitionsControllerTest: test_should_show_definition
+------------------------------------------------------
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/show.html.erb within layouts/application (1.9ms)
+  Rendered definitions/_navbar.html.erb (0.6ms)
+Completed 200 OK in 189ms (Views: 187.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+DefinitionsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered definitions/_form.html.erb (18.5ms)
+  Rendered definitions/edit.html.erb within layouts/application (21.1ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+DefinitionsControllerTest: test_should_destroy_definition
+---------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/definitions
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "definitions"
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------------
+DefinitionsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#index as HTML
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.7ms)
+  Rendered definitions/_navbar.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_update_definition
+--------------------------------------------------------
+  [1m[36mDefinition Load (0.4ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#update as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190962
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+DefinitionsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DefinitionsController#new as HTML
+  Rendered definitions/_form.html.erb (1.6ms)
+  Rendered definitions/new.html.erb within layouts/application (2.2ms)
+  Rendered definitions/_navbar.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+DefinitionsControllerTest: test_should_create_definition
+--------------------------------------------------------
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+Processing by DefinitionsController#create as HTML
+  Parameters: {"definition"=>{"meaning"=>"MyString", "word"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "MyString"], ["meaning", "MyString"], ["created_at", "2015-10-06 12:51:32.614119"], ["updated_at", "2015-10-06 12:51:32.614119"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/definitions/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "definitions"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
