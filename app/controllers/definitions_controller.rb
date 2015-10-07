@@ -1,5 +1,5 @@
 class DefinitionsController < ApplicationController
-  before_action :ensure_logged_in
+  before_action :authenticate_user!
   before_action :set_definition, only: [:show, :edit, :update, :destroy]
 
   # GET /definitions
@@ -84,10 +84,5 @@ class DefinitionsController < ApplicationController
     params.require(:definition).permit(:word, :meaning, :word_type, :sentence ,:search)
   end
 
-  def ensure_logged_in
-    if current_user.nil?
-      redirect_to new_session_path
-      return false
-    end
-  end
+
 end

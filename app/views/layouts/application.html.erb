@@ -22,9 +22,9 @@
        <!-- Collect the nav links, forms, and other content for toggling -->
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav">
-           <li><%= link_to "Login",  new_session_path %></li>
-           <li><%= link_to "Logout", sessions_path, method: :delete, data: { confirm: 'Back to Earth?' } %></li>
-           <li><%= link_to "Random Space Tongue",  new_session_path %></li>
+           <li><%= link_to "Login",  new_user_session_path %></li>
+           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: 'Back to Earth?' } %></li>
+           <li><%= link_to "Random Space Tongue",  new_user_session_path %></li>
            <%= yield :more_links %>
          </ul>
           <%= form_tag search_definitions_path, method: :get, class: "navbar-form navbar-left" %>
@@ -38,8 +38,9 @@
      </div><!-- /.container-fluid -->
    </nav>
   </header>
-
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 
 </body>
 </html>
