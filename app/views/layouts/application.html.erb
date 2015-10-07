@@ -9,10 +9,8 @@
 <body>
   <header>
     <h1 id='text'><%= image_tag("logo.png", height: '75', width: '75')%>Space Jargon</h1>
-    <div class="containenav">
      <nav class="navbar navbar-default navbar" role="navigation">
      <div class="container-fluid">
-       <!-- Brand and toggle get grouped for better mobile display -->
        <div class="navbar-header">
          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
            <span class="sr-only">Toggle navigation</span>
@@ -26,7 +24,7 @@
          <ul class="nav navbar-nav">
            <li><%= link_to "Login",  new_session_path %></li>
            <li><%= link_to "Logout", sessions_path, method: :delete, data: { confirm: 'Back to Earth?' } %></li>
-            <li><%= link_to "Space Tongue of The Day",  new_session_path %></li>
+           <li><%= link_to "Random Space Tongue",  new_session_path %></li>
            <%= yield :more_links %>
          </ul>
           <%= form_tag search_definitions_path, method: :get, class: "navbar-form navbar-left" %>
@@ -39,7 +37,6 @@
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
    </nav>
-  </div>
   </header>
 
 <%= yield %>

@@ -1,18 +1,33 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
 
-            <div class="wrap">
-                <p class="form-title">
-                    Sign In</p>
-                <%= form_tag sessions_path, method: :post, class: "login" %>
-                <!-- <form class="login" sessions_path, method: :post> -->
-                <input name="email" type="text"  placeholder="Email Address" />
-                <input name="password" type="password" inputname="inputPassword" placeholder="Password" />
-                <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
-                </form>
-            </div>
-        </div>
+<!--Video Section-->
+<section class="content-section video-section">
+  <div class="pattern-overlay">
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=C4AFe6VWNHQ&list=PLHuZPaPmAjtI-8C-BkT4LiJDzRW7oDB7x&index=5',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <div class="wrap">
+                          <p class="form-title">
+                              Sign In</p>
+                          <%= form_tag sessions_path, method: :post, class: "login" %>
+                          <!-- <form class="login" sessions_path, method: :post> -->
+                          <input name="email" type="text"  placeholder="Email Address" />
+                          <input name="password" type="password" inputname="inputPassword" placeholder="Password" />
+                          <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
+                          </form>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+	   </div>
+      </div>
     </div>
-
-</div>
+  </div>
+</section>
