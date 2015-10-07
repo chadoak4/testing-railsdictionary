@@ -5,9 +5,10 @@
             <div class="wrap">
                 <p class="form-title">
                     Sign In</p>
-                <form class="login">
-                <input type="text" id="inputEmail" placeholder="Email Address" />
-                <input type="password" id="inputPassword" placeholder="Password" />
+                <%= form_tag sessions_path, method: :post, class: "login" %>
+                <!-- <form class="login" sessions_path, method: :post> -->
+                <input name="email" type="text"  placeholder="Email Address" />
+                <input name="password" type="password" inputname="inputPassword" placeholder="Password" />
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
                 </form>
             </div>

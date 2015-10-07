@@ -7603,3 +7603,1344 @@ Started GET "/sessions/new" for ::1 at 2015-10-07 02:17:41 -0400
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 52ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 02:29:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:29:31 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 306ms (Views: 305.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 02:30:02 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LO1vA4jk01xUuTkM+6bN8i6LJp5LjrGjsfBe3aDZeVKDf7/UwD+XzRHepwwbce1GD/lXkVfzUvt/wsfTwndjpg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:30:02 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:30:30 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 87ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:30:41 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 02:33:37 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:33:37 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:33:52 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 64ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-10-07 02:34:14 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OVcJrbrfLUOTcxcCM5Wz2LMs3NTVIspkP7yryT4mGvWWxdl68gRp0tYUiQLTQpNskl6t28lfKTzxjjLHXIgAAQ=="}
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:34:14 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:34:17 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 02:34:47 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/chadoakley/tiy/testing-railsdictionary/app/views/layouts/application.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...ce Tongue of The Day",  need to create a path );@output_buff...
+...                               ^):
+  app/views/layouts/application.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:44:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 267ms (Views: 257.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/definitions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/scaffolds.self-e2ece476a0debb854ff69320e1297c591a2eb41449dbcf420e4c75b07fac1e7c.css?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/application.self-49eadd83ee253dfe84c021d3f4e6acf18655fb17b68f687f58c76d2c5e6711f2.css?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/application.self-23291c19d0a4efd5022c2424ee45e8eb585f746aa430fe1b271b58eebee694cf.js?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/definitions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/logo-10f3fef0dcc720855ccfdab5690357861a3f1c978fee2a333baf30ce10cc6c71.png" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/assets/space-1994a955588f989d3cd2f97eefc1a2712bc18771ca5b9e723439d4b2133ec51e.jpg" for ::1 at 2015-10-07 08:44:03 -0400
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:47:03 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:47:15 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:48:43 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/definitions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/application.self-49eadd83ee253dfe84c021d3f4e6acf18655fb17b68f687f58c76d2c5e6711f2.css?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/scaffolds.self-e2ece476a0debb854ff69320e1297c591a2eb41449dbcf420e4c75b07fac1e7c.css?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/definitions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/application.self-23291c19d0a4efd5022c2424ee45e8eb585f746aa430fe1b271b58eebee694cf.js?body=1" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started GET "/assets/logo-10f3fef0dcc720855ccfdab5690357861a3f1c978fee2a333baf30ce10cc6c71.png" for ::1 at 2015-10-07 08:48:43 -0400
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 08:48:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSvqgf31oUi49keICz7gofpjz5MyDRmzwwyCSxm5qvKINAzkL86UozXGU1tv70jdipfMAkfVQEl6afBy2VeOJw=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:48:51 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 08:58:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8IkAyjrpKm3ACDFYJiqPOU1XMdCeulkqYktAOFAGp2Htluav6NIfhk04JYtC+ydFPaMyQetiANDbLjIBkOiDtA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:58:40 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 08:58:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/cuR7ki+sr+qqkZOyB/IqbzoV2dx6CkN5gsGQH64wdG6MgiaxnPIXOavcpf8dde1geizOgf+V6O/V4gwRTH0g=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 08:58:51 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:01:18 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:01:23 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:01:23 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:01:36 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CLR2WYdn4O/xuKLy+n6PgqVC5AxwVO0Dygloh+9CQPhPTe8tCaqaDL29livOFJCemEIAUQZCk62TVeb31Mt1g=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:01:36 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:03:01 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:03:01 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:03:09 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:03:09 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:03:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCmVAavE2OEEbytUhDbgrmuNTda9wEfWi+NHq12ps/LdNnNkef/tColfP4fg50jSG3lOR8gYHiwyhjWSnUeXJw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:03:56 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:04:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uW1rKN40UdxKGS0i8XxGdBSC9N9KLCpAbcQ6wqO2Xvukco1NDA9kN8cpOfGVre4IZHb3Tj/0c7rUoUj7Y1h6Lg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:04:12 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/definitions/search" for ::1 at 2015-10-07 09:05:36 -0400
+
+ActionController::RoutingError (No route matches [POST] "/definitions/search"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (139.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:10:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/chadoakley/tiy/testing-railsdictionary/app/views/layouts/application.html.erb:57: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/chadoakley/tiy/testing-railsdictionary/app/views/layouts/application.html.erb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/layouts/application.html.erb:57: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/layouts/application.html.erb:59: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:11:10 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 222ms (Views: 221.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/definitions/search?utf8=%E2%9C%93&%3Asearch=hi" for ::1 at 2015-10-07 09:11:13 -0400
+Processing by DefinitionsController#search as HTML
+  Parameters: {"utf8"=>"✓", ":search"=>"hi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:11:13 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:14:31 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:14:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXuhTAwVBrd32hZ0dAJPvC1adQuAg9BMApoIvzJIGz6UZEcp3i4zXPrqAqcQ0+fAXa52mvVbiba7/3qG8qY/6w==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:14:39 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.3ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 99ms (Views: 92.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:16:27 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:16:30 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:18:35 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1470ms (Views: 1468.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-93e01f80351010704e1b475291d943395cc29400a1a041afa1b229dbdb585608.css?body=1" for ::1 at 2015-10-07 09:18:36 -0400
+
+
+Started GET "/" for ::1 at 2015-10-07 09:18:38 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:20:15 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.3ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Invalid CSS after "...2px !important}": expected selector or at-rule, was "}"):
+    2: <html>
+    3: <head>
+    4:   <title>Railsdictionary</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:26
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__990882713813836657_70226419451440'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:20:37 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1447ms (Views: 1444.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c351ce0908d8e671ba6d4d7b933195397a8b40022db87c72dc0d13fd210f0f90.css?body=1" for ::1 at 2015-10-07 09:20:39 -0400
+
+
+Started GET "/sessions" for ::1 at 2015-10-07 09:30:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'index' could not be found for SessionsController):
+  actionpack (4.2.4) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:31:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXuhTAwVBrd32hZ0dAJPvC1adQuAg9BMApoIvzJIGz6UZEcp3i4zXPrqAqcQ0+fAXa52mvVbiba7/3qG8qY/6w==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:31:14 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.3ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1725ms (Views: 1720.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-69f69f9187ae82c13295be9f7045fceb93c95cffdc2c317fe79860883f78afa6.css?body=1" for ::1 at 2015-10-07 09:31:15 -0400
+
+
+Started GET "/" for ::1 at 2015-10-07 09:34:46 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-10-07 09:35:08 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1ec5zkqUgu/hjRSlk8wr79Mh1pLt+QOT4bdwhZFCNwnI+N+rmK+3BGy9AHb3HYOTo9XVA5ghWmlY0gK8UawT3A=="}
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:35:08 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/definitions/search?utf8=%E2%9C%93&%3Asearch=hi" for ::1 at 2015-10-07 09:37:34 -0400
+Processing by DefinitionsController#search as HTML
+  Parameters: {"utf8"=>"✓", ":search"=>"hi"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 09:37:34 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 09:38:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVRYjw8G46L2Or/Irkgb5NNYAn3F/8FfwZLsz8klGMBJAX4riiDOkdmD0WegJyoDejA8p1yS2JIDpk2NXs0H6A==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:38:08 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:41:40 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1396ms (Views: 1395.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-10081e460be14efb70579e0b51c307fa78b3617922cef36c47f41ff5ac7d4b6b.css?body=1" for ::1 at 2015-10-07 09:41:42 -0400
+
+
+Started GET "/" for ::1 at 2015-10-07 09:42:39 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1531ms (Views: 1528.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-5027c2173603559165a8d25f9567f2c64aadb02cf6fdcffa21f302e15ebeb4c8.css?body=1" for ::1 at 2015-10-07 09:42:40 -0400
+
+
+Started GET "/" for ::1 at 2015-10-07 09:44:33 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 09:49:16 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 09:50:33 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (21.3ms)
+  Rendered definitions/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 09:53:37 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (3.7ms)
+  Rendered definitions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1491ms (Views: 1490.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-effbac95c51a6a5276a6251e06dd747b6a65135824d7f3851d827f5381b8aa62.css?body=1" for ::1 at 2015-10-07 09:53:38 -0400
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 09:53:53 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 09:55:04 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (1.9ms)
+  Rendered definitions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 09:57:35 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (1.6ms)
+  Rendered definitions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1466ms (Views: 1464.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-be12788dcc5eb078f74dda714b7f403e93c9b8c2c3850d4464b86aad3bfb65c6.css?body=1" for ::1 at 2015-10-07 09:57:37 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:00:41 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (1.6ms)
+  Rendered definitions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:00:45 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:02:01 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1670ms (Views: 1668.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:02:03 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (8.4ms)
+  Rendered definitions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-7941801541627a9527f0ca1cad3191a7e226eafb90f6fd44b54802f55fd4d513.css?body=1" for ::1 at 2015-10-07 10:02:03 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:02:08 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (5.3ms)
+  Rendered definitions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:02:36 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1472ms (Views: 1470.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-843a7034fa70a0951587c613fbf69bf8cc046a837cec6c3b11a453ff8253b314.css?body=1" for ::1 at 2015-10-07 10:02:37 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:02:41 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (1.7ms)
+  Rendered definitions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:04:28 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (1.1ms)
+  Rendered definitions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/chadoakley/tiy/testing-railsdictionary/app/views/definitions/_form.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+...ppend=  form_for(@definition) :html => { :style => 'backgrou...
+...                               ^
+/Users/chadoakley/tiy/testing-railsdictionary/app/views/definitions/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+... 'background-color:#E0E0E0;' }) do |f| @output_buffer.safe_a...
+...                               ^
+/Users/chadoakley/tiy/testing-railsdictionary/app/views/definitions/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/definitions/_form.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+  app/views/definitions/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+  app/views/definitions/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/definitions/new.html.erb:3:in `_app_views_definitions_new_html_erb___1965663426270353128_70102484088320'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.5ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:05:00 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (2.2ms)
+  Rendered definitions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:05:39 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (4.8ms)
+  Rendered definitions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:06:39 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (4.5ms)
+  Rendered definitions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 1394ms (Views: 1392.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-97a1a5047c0b19455722a5be30034dea8cbb6d999ac372fc5c9d310c661825af.css?body=1" for ::1 at 2015-10-07 10:06:41 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 10:07:54 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (2.6ms)
+  Rendered definitions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1484ms (Views: 1483.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-884f260071acf1ccdf9bedb958684acce5a609ffbba6270994998ad90b515948.css?body=1" for ::1 at 2015-10-07 10:07:55 -0400
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:08:00 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:10:31 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 10:10:43 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 10:10:53 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZaqNwQPjxyQlcLqNx0V+daXM08bwQIiCcHc1gJmXDutw4yTgSmiL78srEU5ciQef/8NlYKsG+/L9X2UlY5DEw==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 10:10:53 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "gavin@example.com"], ["password", "sekret"], ["created_at", "2015-10-07 14:24:29.194442"], ["updated_at", "2015-10-07 14:24:29.194442"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "gavin@example.com"], ["password", "alsosekret"], ["created_at", "2015-10-07 14:24:29.199303"], ["updated_at", "2015-10-07 14:24:29.199303"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "toni@example.com"], ["password", "supersekret"], ["created_at", "2015-10-07 14:24:29.201225"], ["updated_at", "2015-10-07 14:24:29.201225"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["word", "Mars"], ["meaning", "the Solar System's fourth innermost planet"], ["created_at", "2015-10-07 14:24:29.209029"], ["updated_at", "2015-10-07 14:24:29.209029"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.2ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "Gravity Assist"], ["meaning", "An effect through which an orbiting object, such as a spacecraft or a comet, gains or loses speed by virtue of the gravitational might of a planet or other celestial object that it passes."], ["created_at", "2015-10-07 14:24:29.214750"], ["updated_at", "2015-10-07 14:24:29.214750"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2015-10-07 10:24:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 267ms (Views: 242.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:24:56 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.7ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 10:30:11 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.5ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 1856ms (Views: 1844.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.self-35d47f196adfbe1c33cc55a941bef5e74100125e2391ceaaa4fe87ff07895dee.css?body=1" for ::1 at 2015-10-07 10:30:13 -0400
+
+
+Started GET "/definitions/1/edit" for ::1 at 2015-10-07 10:30:33 -0400
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered definitions/_form.html.erb (17.4ms)
+  Rendered definitions/edit.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:30:40 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions/1/edit" for ::1 at 2015-10-07 10:30:48 -0400
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered definitions/_form.html.erb (1.8ms)
+  Rendered definitions/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/definitions/1" for ::1 at 2015-10-07 10:31:05 -0400
+Processing by DefinitionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/mv96Pi9SHkppvLSMErMI4dl8K4k9kltduU/rFligKvrIlTJsTYEssf9WRGrhrXJ3WpGCH+wOh37zW8Jo2VKg==", "definition"=>{"word"=>"Mars", "meaning"=>"the Solar System's fourth innermost planet", "word_type"=>"noun", "sentence"=>"Our future home is on Mars."}, "commit"=>"Update Definition", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "definitions" SET "word_type" = ?, "sentence" = ?, "updated_at" = ? WHERE "definitions"."id" = ?[0m  [["word_type", "noun"], ["sentence", "Our future home is on Mars."], ["updated_at", "2015-10-07 14:31:05.449659"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/definitions/1
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/definitions/1" for ::1 at 2015-10-07 10:31:05 -0400
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered definitions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:31:07 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions/2/edit" for ::1 at 2015-10-07 10:32:23 -0400
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered definitions/_form.html.erb (2.1ms)
+  Rendered definitions/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 10:36:56 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/definitions/2/edit" for ::1 at 2015-10-07 10:36:59 -0400
+Processing by DefinitionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered definitions/_form.html.erb (2.4ms)
+  Rendered definitions/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/definitions/2" for ::1 at 2015-10-07 10:37:49 -0400
+Processing by DefinitionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMURicDqqAVFpBKDPEcz/np2FUIdQhZdmSVm96G8QIYkkDctRcyFNmodfCwyKAIZ0x4rmIQvD5BbEce1NlRfrg==", "definition"=>{"word"=>"Gravity Assist", "meaning"=>"An effect through which an orbiting object, such as a spacecraft or a comet, gains or loses speed by virtue of the gravitational might of a planet or other celestial object that it passes.", "word_type"=>"noun", "sentence"=>"SpaceX uses gravity assists to visit Mars"}, "commit"=>"Update Definition", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "definitions" SET "word_type" = ?, "sentence" = ?, "updated_at" = ? WHERE "definitions"."id" = ?[0m  [["word_type", "noun"], ["sentence", "SpaceX uses gravity assists to visit Mars"], ["updated_at", "2015-10-07 14:37:49.141646"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/definitions/2
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/definitions/2" for ::1 at 2015-10-07 10:37:49 -0400
+Processing by DefinitionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered definitions/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:37:51 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "gavin@example.com"], ["password", "sekret"], ["created_at", "2015-10-07 14:38:06.603286"], ["updated_at", "2015-10-07 14:38:06.603286"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "gavin@example.com"], ["password", "alsosekret"], ["created_at", "2015-10-07 14:38:06.608266"], ["updated_at", "2015-10-07 14:38:06.608266"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "toni@example.com"], ["password", "supersekret"], ["created_at", "2015-10-07 14:38:06.610570"], ["updated_at", "2015-10-07 14:38:06.610570"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["word", "Mars"], ["meaning", "the Solar System's fourth innermost planet"], ["created_at", "2015-10-07 14:38:06.619090"], ["updated_at", "2015-10-07 14:38:06.619090"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "Gravity Assist"], ["meaning", "An effect through which an orbiting object, such as a spacecraft or a comet, gains or loses speed by virtue of the gravitational might of a planet or other celestial object that it passes."], ["created_at", "2015-10-07 14:38:06.622169"], ["updated_at", "2015-10-07 14:38:06.622169"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["word", "Habitable Zone"], ["meaning", "A region around a star where planets with liquid water may be present."], ["created_at", "2015-10-07 14:38:06.624560"], ["updated_at", "2015-10-07 14:38:06.624560"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["word", "Moon"], ["meaning", "A large body orbiting a planet."], ["created_at", "2015-10-07 14:38:06.627396"], ["updated_at", "2015-10-07 14:38:06.627396"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "definitions" ("word", "meaning", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["word", "Interstellar Space"], ["meaning", "The dark regions of space located between the stars."], ["created_at", "2015-10-07 14:38:06.630056"], ["updated_at", "2015-10-07 14:38:06.630056"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:38:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 266ms (Views: 243.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/definitions/4" for ::1 at 2015-10-07 10:38:46 -0400
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TVw9ZcgoFg42Uy8QQXoO3qcGpv9+rN6WFnWUZpn/Dr1VCRvBTQ47PRnqQb9PFT85Dm6YJefBx1vUQTUkDhcRlQ==", "id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mDELETE FROM "definitions" WHERE "definitions"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/definitions
+Completed 302 Found in 20ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:38:46 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:41:01 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1607ms (Views: 1605.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-53c2d62952d353cc185a039a0fcf3247825290d538618636ab8e65b51d2dff00.css?body=1" for ::1 at 2015-10-07 10:41:02 -0400
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:42:23 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.6ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1528ms (Views: 1525.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.self-2e1f3be2ba7b809a732d35b728dae1729d5aac3a615e71db9b18177985e1669e.css?body=1" for ::1 at 2015-10-07 10:42:24 -0400
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:44:02 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.3ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1549ms (Views: 1548.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-7a5ade457e0c4843db47b50376b951cdf9556ea96b116d4aa5bcb82d622f6ec7.css?body=1" for ::1 at 2015-10-07 10:44:04 -0400
+
+
+Started DELETE "/definitions/3" for ::1 at 2015-10-07 10:44:34 -0400
+Processing by DefinitionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lfyISZh562iFZ+XItbVZYeRuHkFEdAskWyIHfdRjW1mNqa7tHV/GW6rei2e72miGTQYgm90ZEumZFqY/Q4tEcQ==", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT  "definitions".* FROM "definitions" WHERE "definitions"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "definitions" WHERE "definitions"."id" = ?  [["id", 3]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/definitions
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:44:34 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.2ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDefinitions (20150929175142)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "definitions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "meaning" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150929175142"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddWordTypeToDefinitions (20151001033021)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "definitions" ADD "word_type" varchar[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151001033021"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddSentenceToDefinitions (20151001052443)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "definitions" ADD "sentence" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151001052443"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20151006182310)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151006182310"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 10:57:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :ensure_logged_in rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 10:57:50 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 197ms (Views: 196.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 10:57:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4loIoMvlouF5U7JdRlRZ+4gPx1NVVClydDQnA9C15AD3E6GBgm7uKpcIGZ7dmCAR0gBx9Q4SWgL5HHemKrIuA==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-10-07 10:57:57 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 74ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "gavin@example.com"], ["password", "sekret"], ["created_at", "2015-10-07 14:59:39.241372"], ["updated_at", "2015-10-07 14:59:39.241372"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "gavin@example.com"], ["password", "alsosekret"], ["created_at", "2015-10-07 14:59:39.246048"], ["updated_at", "2015-10-07 14:59:39.246048"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "toni@example.com"], ["password", "supersekret"], ["created_at", "2015-10-07 14:59:39.248264"], ["updated_at", "2015-10-07 14:59:39.248264"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "definitions" ("word", "meaning", "word_type", "sentence", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["word", "Mars"], ["meaning", "the Solar System's fourth innermost planet"], ["word_type", "noun"], ["sentence", "Mars will be our new home"], ["created_at", "2015-10-07 14:59:39.257130"], ["updated_at", "2015-10-07 14:59:39.257130"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "word_type", "sentence", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "Gravity Assist"], ["meaning", "An effect through which an orbiting object, such as a spacecraft or a comet, gains or loses speed by virtue of the gravitational might of a planet or other celestial object that it passes."], ["word_type", "noun"], ["sentence", "SpaceX uses gravity assist to visit Mars"], ["created_at", "2015-10-07 14:59:39.259977"], ["updated_at", "2015-10-07 14:59:39.259977"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "definitions" ("word", "meaning", "word_type", "sentence", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["word", "Habitable Zone"], ["meaning", "A region around a star where planets with liquid water may be present."], ["word_type", "noun"], ["sentence", "Mars is a habitable zone"], ["created_at", "2015-10-07 14:59:39.263665"], ["updated_at", "2015-10-07 14:59:39.263665"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "definitions" ("word", "meaning", "word_type", "sentence", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "Moon"], ["meaning", "A large body orbiting a planet."], ["word_type", "noun"], ["sentence", "Mars has two moons, Phobos and Deimos"], ["created_at", "2015-10-07 14:59:39.268823"], ["updated_at", "2015-10-07 14:59:39.268823"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "definitions" ("word", "meaning", "word_type", "sentence", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["word", "Interstellar Space"], ["meaning", "The dark regions of space located between the stars."], ["word_type", "noun"], ["sentence", "The space between Pluto and the next solar system is considered Interstellar Space"], ["created_at", "2015-10-07 14:59:39.273625"], ["updated_at", "2015-10-07 14:59:39.273625"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started POST "/sessions" for ::1 at 2015-10-07 11:00:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"93ZOT+tQ6vAvLdHpfbME0RsGHd21DrX4QCft+gLZjszvI2jrbnbHwwCUv0Zz3DU2sm4jByxjrDWCE0y4lTGR5A==", "email"=>"gavin@example.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gavin@example.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 11:00:10 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.2ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 231ms (Views: 227.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-07 11:01:00 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1488ms (Views: 1485.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-af8419e5d446270511d9ef405373f1ef939ee277ba4bf6d6a156395f53926f17.css?body=1" for ::1 at 2015-10-07 11:01:01 -0400
+
+
+Started GET "/" for ::1 at 2015-10-07 11:03:32 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDefinition Load (0.1ms)[0m  SELECT "definitions".* FROM "definitions"
+  Rendered definitions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1395ms (Views: 1394.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-5b75de9c42f5e7d3b66af6a4c5f44580ff3fb2ec11f9457067ef575917de0df6.css?body=1" for ::1 at 2015-10-07 11:03:33 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 11:05:28 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (20.6ms)
+  Rendered definitions/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 11:06:46 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered definitions/_form.html.erb (3.3ms)
+  Rendered definitions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 1481ms (Views: 1478.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-6fddff600ef0ca986b95a332032b3dd56044cc2d2000cc3fffd98fb117c698c6.css?body=1" for ::1 at 2015-10-07 11:06:48 -0400
+
+
+Started GET "/definitions/new" for ::1 at 2015-10-07 11:07:05 -0400
+Processing by DefinitionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered definitions/_form.html.erb (2.1ms)
+  Rendered definitions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1472ms (Views: 1470.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-9ac9f7a2b776112292a4653a2d0459d448de11fe24a1ad5eaca5b21027fef31f.css?body=1" for ::1 at 2015-10-07 11:07:07 -0400
+
+
+Started GET "/definitions" for ::1 at 2015-10-07 11:07:22 -0400
+Processing by DefinitionsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDefinition Load (0.1ms)[0m  [1mSELECT "definitions".* FROM "definitions"[0m
+  Rendered definitions/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.2ms)
