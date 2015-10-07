@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001052443) do
+ActiveRecord::Schema.define(version: 20151006182310) do
 
   create_table "definitions", force: :cascade do |t|
     t.string   "word"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20151001052443) do
     t.datetime "updated_at", null: false
     t.string   "word_type"
     t.string   "sentence"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

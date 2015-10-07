@@ -9,7 +9,36 @@
 <body>
   <header>
     <h1 id='text'>Out of this World Jargon</h1>
-    <%= render 'navbar' %>
+
+     <nav class="navbar navbar-default navbar" role="navigation">
+     <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+           <li><%= link_to "Login",  new_session_path %></li>
+           <li><%= link_to "Logout", sessions_path, method: :delete, data: { confirm: 'Back to Earth?' } %></li>
+            <li><%= link_to "Space Tongue of The Day",  new_session_path %></li>
+           <%= yield :more_links %>
+         </ul>
+         <form class="navbar-form navbar-left" role="search" action="search_definitions_path" method="get">
+           <div class="form-group">
+             <input type="text" name=":search" class="form-control" placeholder="Search">
+           </div>
+           <button type="submit" class="btn btn-default">Submit</button>
+         </form>
+       </div><!-- /.navbar-collapse -->
+     </div><!-- /.container-fluid -->
+   </nav>
     <!-- <div id="search">
       <%= form_tag(search_definitions_path,method: "get") do %>
           <%= text_field_tag :search %>

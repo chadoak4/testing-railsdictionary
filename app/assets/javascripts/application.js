@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function () {
+   $('.forgot-pass').click(function(event) {
+     $(".pr-wrap").toggleClass("show-pass-reset");
+   });
+
+   $('.pass-reset-submit').click(function(event) {
+     $(".pr-wrap").removeClass("show-pass-reset");
+   });
+});
+
+$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
+});
